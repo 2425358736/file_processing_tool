@@ -5,6 +5,10 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.*;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 
 import java.io.*;
 import java.lang.reflect.Field;
@@ -25,6 +29,18 @@ import java.util.regex.Pattern;
  * @created 2018/5/2.
  */
 public class PoiWord {
+
+    public static ResponseEntity<byte[]> wordReplace(String filePath, Map<String, Object> map, String fileName) throws IOException {
+        byte[] bytes = poiTransformation(filePath,map);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.valueOf("application/msword"));
+        String [] nameArr = filePath.split("\\.");
+        String type = nameArr[nameArr.length-1];
+        headers.setContentDispositionFormData("attachment", new String((fileName +"."+type).getBytes("utf-8"), "ISO8859-1"));
+        ResponseEntity<byte[]> responseEntity = new ResponseEntity<byte[]>(bytes, headers, HttpStatus.OK);
+        return responseEntity;
+    }
+
 
     public static byte[] poiTransformation(String inPath, Map<String, Object> map) throws IOException {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
