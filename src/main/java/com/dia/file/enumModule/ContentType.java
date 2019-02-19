@@ -10,16 +10,17 @@ package com.dia.file.enumModule;
  * @created 2018/5/22.
  */
 public enum ContentType {
-    doc("application/msword","./file/word/"),
-    docx("application/msword","./file/word/"),
-    xls("application/vnd.ms-excel","./file/excel/"),
-    xlsx("application/vnd.ms-excel","./file/excel/"),
-    jpg("image/jpeg","./file/image/"),
-    png("image/jpeg","./file/image/"),
-    pdf("application/pdf","./file/pdf/");
+    doc("application/msword"),
+    docx("application/msword"),
+    xls("application/vnd.ms-excel"),
+    xlsx("application/vnd.ms-excel"),
+    jpg("image/jpeg"),
+    png("image/jpeg"),
+    gif("image/gif"),
+    qt("text/plain"),
+    pdf("application/pdf");
 
     private String type;
-    private String path;
 
     public static ContentType ContentTypeStr(String string){
         if(string!=null){
@@ -29,12 +30,11 @@ public enum ContentType {
             catch(IllegalArgumentException ex){
             }
         }
-               return null;
+        return Enum.valueOf(ContentType.class, "qt".trim());
     }
 
 
-    ContentType(String type, String path) {
-        this.path = path;
+    ContentType(String type) {
         this.type = type;
     }
 
@@ -44,13 +44,5 @@ public enum ContentType {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 }
