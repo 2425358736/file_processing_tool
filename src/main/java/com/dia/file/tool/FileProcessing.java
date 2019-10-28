@@ -19,8 +19,8 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * 开发公司：青岛海豚数据技术有限公司
- * 版权：青岛海豚数据技术有限公司
+ * 开发公司：xxx公司
+ * 版权：xxx公司
  * <p>
  * FileProcessing
  *

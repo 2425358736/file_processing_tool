@@ -20,8 +20,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 开发公司：青岛上朝信息科技有限公司
- * 版权：青岛上朝信息科技有限公司
+ * 开发公司：xxx公司
+ * 版权：xxx公司
  * <p>
  * 类功能描述
  *

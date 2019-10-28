@@ -6,7 +6,7 @@
 
     <groupId>com.dia.file</groupId>
     <artifactId>file_processing_tool</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.0</version>
 
 
     <properties>
@@ -16,10 +16,12 @@
     <distributionManagement>
         <repository>
             <id>rdc-releases</id>
-            <name>rdc-releases</name>
-            <url>https://repo.rdc.aliyun.com/repository/49565-release-tho2J7</url>
-            <uniqueVersion>true</uniqueVersion>
+            <url>https://repo.rdc.aliyun.com/repository/52287-release-z5pXzl/</url>
         </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/52287-snapshot-DxXvSf/</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <dependencies>
