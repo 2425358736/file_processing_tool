@@ -59,7 +59,7 @@ public class FileProcessing {
 
                 Path path = Files.createFile(Paths.get(this.fileModle.getPath() + "/" + dirName + "/" + imgName));
                 Files.write(path, file.getBytes());
-                pathFile.setFilePath(this.ossModle.getEndpoint() + this.fileModle.getPath() + "/" + dirName + "/" + imgName);
+                pathFile.setFilePath(this.fileModle.getEndpoint() + this.fileModle.getPath() + "/" + dirName + "/" + imgName);
             } catch (IOException e) {
                 e.printStackTrace();
             }

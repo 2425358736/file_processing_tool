@@ -31,4 +31,8 @@ public class FileModle {
      */
     private String dirName;
 
+    /**
+     * 请求地址
+     */
+    private String endpoint;
 }
