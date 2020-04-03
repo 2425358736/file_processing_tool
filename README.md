@@ -24,8 +24,8 @@ file:
     dirName: yyyy-MM-dd # 文件目录规则
   ossModel: # oss上传信息
     endpoint: https://oss-cn-beijing.aliyuncs.com # oss Endpoint
-    accessKeyId: LTAIMWR0HF6oGT4m # oss accessKeyId
-    accessKeySecret: tr4hpwmK0byGBJ8360E8wm5O6QTWu3 # oss accessKeySecret
+    accessKeyId: xxxxxxxxxxx # oss accessKeyId
+    accessKeySecret: xxxxxxxxxx # oss accessKeySecret
     bucketName: yun-cunchu # 存储空间
     dirName: yyyy-MM-dd # 文件目录规则
     fileName: yyyy-MM-dd-HH-mm-ss # 文件名规则
