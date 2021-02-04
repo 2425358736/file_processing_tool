@@ -199,6 +199,20 @@ public class PoiExcelTest {
 }
 
 ```
+### Excel解析
+```
+        String fileName = "D://导入模板.xlsx";
+        InputStream inputStream = new FileInputStream(fileName);
+
+
+        List<String> list = new ArrayList<>();
+        list.add("name"); // 第一列
+        list.add("ddd"); // 第二列
+        List<Test> list1 = ExcelAnalysis.parseExcel(inputStream,fileName,list, Test.class);
+        list1.forEach(test -> {
+            log.info(test.toString());
+        });
+```
  
 ### PoiExcel.exportExcel(listHead,listDataSource,fileName) 导出
 ### PoiExcel.exportExcel(listHead,listDataSource,catalog,fileName) 创建
